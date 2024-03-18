@@ -19,6 +19,7 @@ for(let i=0; i < buttons.length; i++) {
     }
 }
 
+//Second set of buttons
 const otherButtons = document.getElementsByClassName('other-click-me');
 
 for(let i=0; i < otherButtons.length; i++) {
