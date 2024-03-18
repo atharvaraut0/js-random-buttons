@@ -8,3 +8,10 @@ body {
     font-size: 5vw;
     text-transform: uppercase;
 }
+
+#input-label {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    text-transform: uppercase;
+}

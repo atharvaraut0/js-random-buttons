@@ -30,3 +30,50 @@ for(let i=0; i < otherButtons.length; i++) {
         otherButtons[i].style.backgroundColor = 'teal';
     }
 }
+
+//Timed buttons
+
+const timedButtons = document.getElementsByClassName('time-click');
+let incr = 0;
+let userValue = document.getElementById('userValue');
+
+//Setting speed
+function speed() {
+    inputOfUser = true;
+    let userSpeed = userValue.value;
+    console.log(userSpeed);
+    setInterval(setTime, userSpeed)
+    
+}
+
+
+//Animation
+function setTime() {
+    incr = ((incr + 1) % 4);
+    console.log(incr);
+
+    for(i=0; i < timedButtons.length; i++) {
+        let j = Math.abs((i%4) - incr);
+    
+        if(j == 0) {
+            timedButtons[i].style.backgroundColor = 'cyan';
+            timedButtons[i].style.color = 'black';
+            timedButtons[i].innerHTML = 'O';
+        } else if(j == 1) {
+            timedButtons[i].style.backgroundColor = 'magenta';
+            timedButtons[i].style.color = 'black';
+            timedButtons[i].innerHTML = 'OO';
+        } else if( j == 2) {
+            timedButtons[i].style.backgroundColor = 'yellow';
+            timedButtons[i].style.color = 'black';
+            timedButtons[i].innerHTML = 'OOO';
+        } 
+        else {
+            timedButtons[i].style.backgroundColor = 'black';
+            timedButtons[i].style.color = 'white';
+            timedButtons[i].innerHTML = 'OOOO';
+        }
+    }
+   
+}
+
