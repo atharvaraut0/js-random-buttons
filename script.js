@@ -49,11 +49,11 @@ function speed() {
 
 //Animation
 function setTime() {
-    incr = ((incr + 1) % 4);
+    incr = ((incr +1));
     console.log(incr);
 
     for(i=0; i < timedButtons.length; i++) {
-        let j = Math.abs((i%4) - incr);
+        let j = Math.abs(i - incr) % 4;
     
         if(j == 0) {
             timedButtons[i].style.backgroundColor = 'cyan';
